@@ -1,10 +1,11 @@
 import React from "react";
 import YouTubeComp from "../../component/YouTubeComp/YouTubeComp";
+import Product from "../Product/Product";
 
 const Home = () => {
   return (
     <>
-      <p>YouTube</p>
+      {/* <p>YouTube</p>
       <hr />
       <YouTubeComp
         time="7.12"
@@ -21,7 +22,8 @@ const Home = () => {
         title="tutorial React 3"
         desc="2K ditonton, 3 hari yang lalu"
       />
-      <YouTubeComp />
+      <YouTubeComp /> */}
+      <Product />
     </>
   );
 };
