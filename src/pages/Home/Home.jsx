@@ -1,6 +1,7 @@
 import React from "react";
-import YouTubeComp from "../../component/YouTubeComp/YouTubeComp";
-import Product from "../Product/Product";
+// import YouTubeComp from "../../component/YouTubeComp/YouTubeComp";
+import BlogPost from "../BlogPost/BlogPost";
+// import Product from "../Product/Product";
 
 const Home = () => {
   return (
@@ -23,7 +24,8 @@ const Home = () => {
         desc="2K ditonton, 3 hari yang lalu"
       />
       <YouTubeComp /> */}
-      <Product />
+      {/* <Product /> */}
+      <BlogPost />
     </>
   );
 };
