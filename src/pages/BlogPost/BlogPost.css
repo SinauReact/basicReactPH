@@ -45,3 +45,17 @@
   font-size: 16px;
   color: #4a4a4a;
 }
+
+.remove {
+  padding: 10px 18px;
+  background: red;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  margin-top: 18px;
+  border: solid red;
+}
+
+.remove:hover {
+  cursor: pointer;
+}

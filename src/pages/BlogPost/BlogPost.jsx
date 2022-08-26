@@ -8,11 +8,11 @@ const BlogPost = () => {
   const [post, setPost] = useState([]);
 
   useEffect(() => {
-    apiPost();
+    apiGetPost();
   }, []);
 
-  // fetch Request API
-  //   const apiPost = () => {
+  // fetch Request API with get method
+  //   const apiGetPost = () => {
   //     fetch("https://jsonplaceholder.typicode.com/posts")
   //       .then((response) => response.json())
   //       .then((json) => {
@@ -24,23 +24,38 @@ const BlogPost = () => {
   //       });
   //   };
 
-  //   axios Request API
-  const apiPost = () => {
+  //   axios Request API with get method
+  const apiGetPost = () => {
     axios
-      .get("https://jsonplaceholder.typicode.com/posts")
+      .get("http://localhost:3004/posts")
       .then((response) => {
         setPost(response.data);
       })
       .catch((error) => {
-        alert(error.toString());
+        alert("error cuy");
       });
+  };
+
+  //   axios Delete API
+  const handleRemove = (id) => {
+    axios.delete(`http://localhost:3004/posts/${id}`).then((res) => {
+      apiGetPost();
+    });
   };
 
   return (
     <>
       <p>Blog post</p>
       {post.map((item) => {
-        return <Post title={item.title} desc={item.body} key={item.id} />;
+        return (
+          <Post
+            title={item.title}
+            body={item.body}
+            id={item.id}
+            key={item.id}
+            onRemove={handleRemove}
+          />
+        );
       })}
     </>
   );

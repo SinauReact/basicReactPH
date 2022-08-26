@@ -1,6 +1,6 @@
 import React from "react";
 
-const Post = ({ title, desc }) => {
+const Post = ({ title, body, id, onRemove }) => {
   return (
     <>
       <div className="post">
@@ -9,7 +9,10 @@ const Post = ({ title, desc }) => {
         </div>
         <div className="content">
           <p className="title"> {title} </p>
-          <p className="desc"> {desc} </p>
+          <p className="desc"> {body} </p>
+          <button className="remove" onClick={() => onRemove(id)}>
+            Remove
+          </button>
         </div>
       </div>
     </>
