@@ -5,8 +5,8 @@ import "./Product.css";
 const Product = () => {
   const [order, setOrder] = useState(0);
 
-  function handleCounterChange(newOrder) {
-    setOrder(newOrder);
+  function handleCounterChange(NewOrder) {
+    setOrder(NewOrder);
   }
 
   return (
@@ -23,7 +23,7 @@ const Product = () => {
         </div>
       </div>
       <CardProduct
-        onCounterChange={(newOrder) => handleCounterChange(newOrder)}
+        onCounterChange={(NewOrder) => handleCounterChange(NewOrder)}
       />
     </>
   );
