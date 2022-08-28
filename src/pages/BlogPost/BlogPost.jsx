@@ -36,7 +36,7 @@ const BlogPost = () => {
         setPost(response.data);
       })
       .catch((error) => {
-        alert("error cuy");
+        // alert("error cuy");
       });
   };
 
@@ -61,9 +61,6 @@ const BlogPost = () => {
       .post("http://localhost:3004/posts", bodyReq)
       .then((response) => {
         apiGet();
-        setTitle("");
-        setBody("");
-        setId(0);
       })
       .catch((error) => {
         alert("the post is failed");

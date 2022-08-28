@@ -1,31 +1,24 @@
 import React from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 // import YouTubeComp from "../../component/YouTubeComp/YouTubeComp";
 import BlogPost from "../BlogPost/BlogPost";
-// import Product from "../Product/Product";
+import Product from "../Product/Product";
+import "./Home.css";
 
 const Home = () => {
   return (
     <>
-      {/* <p>YouTube</p>
-      <hr />
-      <YouTubeComp
-        time="7.12"
-        title="tutorial React 1"
-        desc="20x ditonton, 1 hari yang lalu"
-      />
-      <YouTubeComp
-        time="8.02"
-        title="tutorial React 2"
-        desc="200x ditonton, 2 hari yang lalu"
-      />
-      <YouTubeComp
-        time="5.04"
-        title="tutorial React 3"
-        desc="2K ditonton, 3 hari yang lalu"
-      />
-      <YouTubeComp /> */}
-      {/* <Product /> */}
-      <BlogPost />
+      <BrowserRouter>
+        <div className="navigation">
+          <Link to="/">Blog Post</Link>
+          <Link to="/product">Product</Link>
+        </div>
+        <Routes>
+          <Route></Route>
+          <Route path="/" element={<BlogPost />} />
+          <Route path="product" element={<Product />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 };

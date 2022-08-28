@@ -11,6 +11,8 @@ const Product = () => {
 
   return (
     <>
+      <p>halaman Product</p>
+      <hr />
       <div className="header">
         <div className="logo">
           <img src={"https://source.unsplash.com/20x20?logo"} alt="" />
@@ -20,7 +22,9 @@ const Product = () => {
           <div className="count">{order}</div>
         </div>
       </div>
-      <CardProduct onCounterChange={handleCounterChange} />
+      <CardProduct
+        onCounterChange={(newOrder) => handleCounterChange(newOrder)}
+      />
     </>
   );
 };
